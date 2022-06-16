@@ -10,6 +10,8 @@ Restart=always
 RestartSec=5
 DynamicUser=true
 ExecStart=/usr/bin/gost -C /etc/gost/config.json
+LimitNOFILE=65536
+LimitNPROC=65536
 
 [Install]
 WantedBy=multi-user.target
